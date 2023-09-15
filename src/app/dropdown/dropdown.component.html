@@ -1,0 +1,13 @@
+
+<div class="custom-dropdown" (click)="toggleDropdown()">
+    <button class="dropdown_btn" [ngClass]="{ 'text_black': selectedOption }" type="button" data-toggle="dropdown">
+      {{ selectedOption || 'Select an option' }} <i [className]="dropdownOpen ? 'fa fa-angle-up' : 'fa fa-angle-down'"  style="font-size:12px; float:right; color: #7F8383;"></i>
+    </button>
+    
+    <div class="dropdown_menu" [ngClass]="{ 'show': dropdownOpen }" (click)="stopPropagation($event)">
+      <ng-container *ngFor="let option of options">
+        <div class="dropdown_item" (click)="selectOption(option)">{{ option }}</div>
+      </ng-container>
+    </div>
+  </div>
+

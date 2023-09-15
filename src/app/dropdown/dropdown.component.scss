@@ -1,0 +1,60 @@
+
+$color_grey: #ACB0B2;
+$background-color_1: white;
+$hover_color: #C7E4F4;
+$text_color: #0B0C0C;
+
+.dropdown_btn {
+	background-color: $background-color_1;
+	width: 400px;
+	color: $color_grey;
+	border: $color_grey solid 1px;
+    border-radius: 5px;
+    font-size: x-small;
+    padding: 5px 10px;
+    text-align: initial;
+}
+
+.text_black{
+    color: $text_color;
+}
+
+.dropdown_menu{
+    display: none;
+}
+.show{
+    display: block;
+    border: $color_grey solid 1px;
+    border-radius: 5px;
+    font-size: x-small;
+    padding: 5px 0px;
+    text-align: initial;
+    width: 400px;
+    margin-top: 10px;
+    height: 41vh;
+    scrollbar-width: thin;
+    overflow-y: scroll;
+}
+
+.dropdown_item{
+    padding: 5px 10px;
+    color: $text_color;
+}
+
+.dropdown_item:hover{
+    background-color: $hover_color;
+}
+
+// for Scrollbar
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color_grey;
+  outline: 0px solid $color_grey;
+}
